@@ -1,1 +1,1 @@
-web: gunicorn app:app
+Flask app for create payments in Piastrix system. 
