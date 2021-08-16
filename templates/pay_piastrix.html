@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<script>
+    window.onload = function() {
+        document.forms['Pay'].submit();
+    }
+</script>
+    <form name="Pay" method="post" action=" https://pay.piastrix.com/ru/pay" accept-charset="UTF-8">
+        <input type="hidden" name="amount" value={{amount}}>
+        <input type="hidden" name="currency" value="978">
+        <input type="hidden" name="shop_id" value={{shop_id}}> 
+        <input type="hidden" name="sign" value={{sha256}}> 
+        <input type="hidden" name="shop_order_id" value={{order_id}}> 
+        <input type="submit">
+        <input type="hidden" name="description" value="Test pay" > 
+    </form>
+
+</body>
+{% endblock %}

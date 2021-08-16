@@ -1,0 +1,13 @@
+db_app.py
+
+venvl/
+
+
+__pycache__
+.idea/ 
+
+.env.dev
+.env
+
+*.log
+*.pot

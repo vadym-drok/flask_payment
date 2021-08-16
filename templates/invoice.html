@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method={{general_data.method}} action={{general_data.url}}>
+        <input name="ac_account_email" value={{data.ac_account_email}}>
+        <input name="ac_sci_name" value={{data.ac_sci_name}}>
+        <input name="ac_amount" value={{data.ac_amount}}>
+        <input name="ac_currency" value={{data.ac_currency}}>
+        <input name="ac_order_id" value={{data.ac_order_id}}>
+        <input name="ac_sign" value={{data.ac_sign}}>
+        <input type="submit">
+    </form>
+
+</body>
+{% endblock %}
+        <!-- <input name="ac_fail_url" value={{data.ac_fail_url}}>
+        <input name="ac_ps" value={{data.ac_ps}}>
+        <input name="ac_sub_merchant_url" value={{data.ac_sub_merchant_url}}>
+        <input name="ac_success_url" value={{data.ac_success_url}}> -->
