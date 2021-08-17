@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 import sentry_sdk
 from sentry_sdk.integrations.flask import FlaskIntegration
 from logging import FileHandler, WARNING
+import datetime
 
 
 load_dotenv()  # load .env
@@ -38,6 +39,7 @@ class Order(db.Model):
     currency = db.Column(db.String, nullable=False)
     amount= db.Column(db.Float, nullable=False)
     description = db.Column(db.Text, nullable=False)
+    created_date = db.Column(db.DateTime, default=datetime.datetime.utcnow)
 
     def __init__(self, currency, amount, description):
         self.currency = currency
