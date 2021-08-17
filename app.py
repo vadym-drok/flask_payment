@@ -109,7 +109,7 @@ def create():
                 "currency": "643",
                 "payway": payway,
                 "shop_id": shop_id,
-                "shop_order_id": order.id,
+                "shop_order_id": str(order.id),
                 "sign": sha256                
                 }
 
