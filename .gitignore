@@ -9,5 +9,6 @@ __pycache__
 .env.dev
 .env
 
+errorlog.txt
 *.log
 *.pot

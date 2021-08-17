@@ -5,14 +5,20 @@ import hashlib
 import requests
 import os
 from dotenv import load_dotenv
+
 import sentry_sdk
 from sentry_sdk.integrations.flask import FlaskIntegration
+from logging import FileHandler, WARNING
 
 
 load_dotenv()  # load .env
 
 app = Flask(__name__)
 
+# logging in the txt file 
+file_handler = FileHandler('errorlog.txt')
+file_handler.setLevel(WARNING)
+app.logger.addHandler(file_handler)
 
 # logging with sentry.io
 sentry_sdk.init(
